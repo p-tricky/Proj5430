@@ -24,9 +24,9 @@ var mainState = {
     // This function will be executed at the beginning
     // That's where we load the game's assets
     game.stage.backgroundColor = '#71c5cf';
-    game.load.image('bird', 'assets/images/bird.png');
-    game.load.image('pipe', 'assets/images/pipe.png');
-    game.load.audio('jump', 'assets/images/jump.wav');
+    game.load.image('bird', 'assets/bird.png');
+    game.load.image('pipe', 'assets/pipe.png');
+    game.load.audio('jump', 'assets/jump.wav');
   },
 
   create: function() {
