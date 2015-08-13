@@ -7,4 +7,12 @@
         <%= @user.name %>
       </h1>
     </section>
+    <div class="col-md-8">
+      <% if @user.games.any? %>
+        <h3>Games: <%= @user.games.count %></h3> 
+        <ol class="games">
+          <%= render @games %>
+        </ol>
+      <% end %>
+    </div>
 </div>
