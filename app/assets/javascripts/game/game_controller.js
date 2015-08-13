@@ -107,6 +107,16 @@ var mainState = {
   },
 
   restartGame: function() {
+    var url = window.location.pathname;
+    var score = this.score;
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: {score: score},
+    }).done(function() {
+    }).fail(function() {
+      alert("Sorry, your score was not saved");
+    });
     game.state.start('start');
   },
 };
