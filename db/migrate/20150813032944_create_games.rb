@@ -6,6 +6,6 @@ class CreateGames < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :games, [:user_id, :created_at]
+    add_index :games, [:user_id, :score]
   end
 end

@@ -111,6 +111,7 @@ var mainState = {
     var score = this.score;
     $.ajax({
       type: "POST",
+      //dataType: 'html',
       url: url,
       data: {score: score},
     }).done(function() {

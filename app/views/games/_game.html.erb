@@ -1,7 +1,7 @@
-<li id="game-<%= micropost.id %>">
+<li id="game-<%= game.id %>">
   <%= link_to gravatar_for(game.user, size: 50), game.user %>
   <span class="user"><%= link_to game.user.name, game.user %></span>
-  <span class="score"><%= game.score %></span>
+  <span class="score">Score: <%= game.score %></span>
   <span class="timestamp">
     Played <%= time_ago_in_words(game.created_at) %> ago.
   </span>

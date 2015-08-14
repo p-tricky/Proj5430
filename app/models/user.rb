@@ -31,4 +31,8 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  def highgame
+    Game.find(self[:highgame_id])
+  end
 end
