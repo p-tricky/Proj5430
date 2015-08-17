@@ -7,7 +7,7 @@
         <%= @user.name %>
       </h1>
       <p>
-        Highscore: <%= @user.highgame[:score] %>
+        Highscore: <%= @user[:highgame_id] ? @user.highgame[:score] : 0 %>
       </p>
     </section>
     <div class="col-md-8">
