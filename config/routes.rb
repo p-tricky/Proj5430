@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   post 'login'   => 'sessions#create'
   delete'logout' => 'sessions#destroy'
 
-  get  'leaderboard'       => 'games#index'
+  get  'leaderboard'       => 'games#show'
   post 'game'              => 'games#create'
+  get  'games/filter'      => 'games#filter'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

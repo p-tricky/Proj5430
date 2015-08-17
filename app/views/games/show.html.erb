@@ -1,0 +1,59 @@
+<div class="table">
+<section>
+  <h1>
+    Leader Board
+  </h1>
+  <%= form_tag("/games/filter", method: "get") do %>
+    <div class='row'>
+      <div class='col'>
+        <%= label_tag :name %>
+      </div>
+      <div class='col'>
+        <%= text_field_tag :name %>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col'>
+        <%= label_tag :start_date %>
+      </div>
+      <div class='col'>
+        <%= select_date(Date.today.beginning_of_year, prefix: 'start')%>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col'>
+        <%= label_tag :end_date %>
+      </div>
+      <div class='col'>
+        <%= select_date(Date.today.end_of_year, prefix: 'end')%>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col'>
+        <%= label_tag 'Min Score' %>
+      </div>
+      <div class='col'>
+        <%= number_field_tag 'min_score', min: 1 %>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col'>
+        <%= label_tag 'Max Score' %>
+      </div>
+      <div class='col'>
+        <%= number_field_tag 'max_score' %>
+      </div>
+    </div>
+    <%= submit_tag "Filter", class: "btn btn-primary" %>
+  <% end %>
+</section>
+<div class="col-md-8">
+  <% if @games.any? %>
+    <h3>Games: <%= @games.count %></h3> 
+    <ol class="games">
+      <%= render @games %>
+    </ol>
+  <% end %>
+</div>
+</div>
+

@@ -8,8 +8,8 @@
       </h1>
     </section>
     <div class="col-md-8">
-      <% if @user.games.any? %>
-        <h3>Games: <%= @user.games.count %></h3> 
+      <% if @games.any? %>
+        <h3>Games: <%= @games.count %></h3> 
         <ol class="games">
           <%= render @games %>
         </ol>
