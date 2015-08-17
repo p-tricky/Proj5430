@@ -6,6 +6,9 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <p>
+        Highscore: <%= @user.highgame[:score] %>
+      </p>
     </section>
     <div class="col-md-8">
       <% if @games.any? %>
